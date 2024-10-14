@@ -258,103 +258,78 @@ body .theme-button-one:hover {background:#151515; }
 /* Responsive heading */
 #theme-main-banner .camera_caption h1 {
   color: #fff;
-  font-size: 3rem; 
-  font-weight: bold;
+  font-size: 3.5rem; /* Slightly larger for impact */
+  font-weight: 700; /* Bolder for prominence */
   text-transform: capitalize;
-  line-height: 1.2; 
+  line-height: 1.2;
+  letter-spacing: 1px; /* Slightly increased letter spacing for modern look */
+  text-align: center; /* Center-align the heading */
+  margin: 20px 0; /* Add some space below heading */
 }
 
 /* Responsive paragraph */
 #theme-main-banner .camera_caption p {
-  color: #fff;
-  font-size: 1.2rem;
-  margin: 20px auto;
-  max-width: 600px; 
+  color: #f0f0f0; 
+  font-size: 1.2rem; 
+  line-height: 1.6; 
+  max-width: 650px; 
+  margin: 20px auto; 
+  padding: 0 20px; 
+  text-align: center; 
+  font-weight: 300; 
+  letter-spacing: 0.5px; 
 }
 
-/* Adjustments for smaller devices */
+/* Adjustments for tablet devices */
 @media (max-width: 991px) {
-  #theme-main-banner {
-    height: 50vh; 
-  }
-
   #theme-main-banner .camera_caption h1 {
-    font-size: 2.5rem; 
+    font-size: 2.8rem; 
   }
 
   #theme-main-banner .camera_caption p {
-    font-size: 1rem;
+    font-size: 1rem; 
+    max-width: 80%; 
+    padding: 0 15px; 
   }
 }
 
+/* Adjustments for mobile devices */
 @media (max-width: 767px) {
   #theme-main-banner {
     height: 40vh; 
   }
 
   #theme-main-banner .camera_caption h1 {
-    font-size: 2rem; 
+    font-size: 2.2rem; 
+    margin: 10px 0; 
   }
 
   #theme-main-banner .camera_caption p {
-    font-size: 0.9rem; 
-    max-width: 80%; 
+    font-size: 0.95rem; 
+    max-width: 90%; 
+    padding: 0 10px; 
+    line-height: 1.5; 
   }
 }
 
+/* Adjustments for very small devices */
 @media (max-width: 575px) {
   #theme-main-banner {
-    height: 35vh; /* Height for very small screens */
+    height: 35vh; 
   }
 
   #theme-main-banner .camera_caption h1 {
-    font-size: 1.8rem; /* Further reduce font size for small screens */
+    font-size: 1.8rem;
+    margin: 5px 0; 
   }
 
   #theme-main-banner .camera_caption p {
-    font-size: 0.8rem; /* Smallest size for very small screens */
+    font-size: 0.85rem; 
+    max-width: 100%; 
+    padding: 0 8px; 
   }
 }
 
-
-/* Styling for paragraphs inside the banner */
-#theme-main-banner .camera_caption p {
-  color: #f0f0f0; /* Light color for better readability */
-  font-size: 1.2rem; /* Slightly larger than default for visibility */
-  line-height: 1.5; /* Increased line height for better readability */
-  max-width: 600px; /* Ensure paragraphs don't stretch too wide */
-  margin: 20px auto; /* Center and space out the paragraph */
-  padding: 0 20px; /* Add some padding to ensure breathing room on mobile */
-  text-align: center; /* Center-align text for balance */
-  font-weight: 300; /* Lighter font for a clean, modern look */
-  letter-spacing: 0.5px; /* Slight letter spacing for readability */
-}
-
-/* Adjustments for tablet devices */
-@media (max-width: 991px) {
-  #theme-main-banner .camera_caption p {
-    font-size: 1rem; /* Reduce font size slightly for smaller screens */
-    max-width: 80%; /* Ensure paragraph width fits smaller screens */
-    padding: 0 15px; /* Add padding to ensure no text touches the edges */
-  }
-}
-
-/* Adjustments for mobile devices */
-@media (max-width: 767px) {
-  #theme-main-banner .camera_caption p {
-    font-size: 0.9rem; /* Further reduce font size for mobile */
-    max-width: 90%; /* Ensure text fits within mobile screens */
-    padding: 0 10px; /* Adjust padding for small screens */
-  }
-}
-
-@media (max-width: 575px) {
-  #theme-main-banner .camera_caption p {
-    font-size: 0.8rem; /* Smallest size for very small screens */
-    max-width: 100%; /* Ensure full use of the mobile width */
-    padding: 0 8px; /* Add minimal padding for edge spacing */
-  }
-}
 
 
  /* Container for the cards */
@@ -705,105 +680,123 @@ section {
 /*=======================================================
       Footer Up
 ========================================================*/
-/* Footer container styling */
-footer {
-  background-color: #005a00; /* Dark green */
-  color: #fff;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Flex container for both sections */
-.footer-container {
-  display: flex;
-  flex-direction: column; /* Stack the sections vertically */
-  align-items: stretch;   /* Make both sections stretch to full width */
-  max-width: 1200px;      /* Optional max width for the footer */
-  width: 100%;            /* Full width */
-}
-
-/* Ensure both sections are equal height */
-.footer-up, .footer-down {
-  flex: 1;               /* Make both sections take equal height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Styling for the first (upper) section */
 .footer-up {
-  background-color: #005a00; /* Dark green */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.footer-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-  width: 100%;    
-  height: 50%;           /* Full width */
-  box-sizing: border-box;     /* Include padding in the width calculation */
+  background-color: #005a00;
+  box-sizing: border-box;
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #003804;
+  box-sizing: border-box;
+}
+
+.footer-up .work, .footer-up .contact {
+  text-align: center;
+}
+
+.footer-up i {
+  font-size: 40px;
+  color: #fff;
 }
 
 .footer-up p {
-  margin: 0;
-  font-size: 16px;
-  letter-spacing: 2px;
   color: #fff;
-}
-
-.footer-address {
-  font-size: 16px;
-  color: #fff;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-/* Styling for the second (lower) section */
-.footer-down {
-  background-color: #003804; /* Darker green */
-  padding: 10px;
-  width: 100%;               /* Full width */
-  box-sizing: border-box;     /* Include padding in the width calculation */
-}
-
-.footer-down p {
-  color: #fff;
-  font-size: 12px;
-  margin: 0;
-}
-
-.social-icons ul {
-  list-style-type: none;
-  padding: 0;
+  letter-spacing: 2.5px;
   margin: 10px 0;
+}
+
+.footer-up a {
+  font-size: 28px;
+}
+
+/* Alignin them horizontally */
+.footer-up .social_icons {
+  margin-bottom: 20px;
+  list-style: none;
+  padding: 0;
   display: flex;
   justify-content: center;
 }
 
-.social-icons ul li {
+.footer-up .social_icons li {
   margin: 0 10px;
 }
 
-.social-icons ul li a {
+.footer-up .social_icons li a {
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   width: 38px;
   height: 38px;
   line-height: 38px;
   text-align: center;
   display: block;
-  border-radius: 50%;
-  background-color: #005a00;
+  border-radius: 50%; /* Circular shape */
+  background-color: #005a00; /* Background color for the circle */
   transition: background-color 0.3s ease;
 }
 
-.social-icons ul li a:hover {
-  background-color: #008000; /* Change background on hover */
+.footer-up .social_icons li a i {
+  font-size: 14px;
 }
 
-.social-icons ul li a i {
-  font-size: 16px;
+.footer-up .social_icons li a:hover {
+  background-color: #008000; 
 }
 
+/*=======================================================
+    FOOTER
+========================================================*/
+footer {
+  background: #005a00;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+footer img {
+  margin-bottom: 20px;
+}
+
+footer p {
+  color: #cecece;
+  font-size: 13px;
+  margin: 0px;
+}
+
+footer .social_icons {
+  margin-top: 20px;
+}
+
+footer .social_icons li {
+  float: none;
+}
+
+footer .social_icons li a {
+  color: #fff;
+  line-height: 38px;
+}
+
+.footer-rights {
+  margin-top: 50px;
+  padding: 15px 0;
+  background: #003804;
+}
 
 @media only screen and (max-width: 768px) {
   /* 1. Make the theme banners occupy 1/4 of the screen */
@@ -815,16 +808,16 @@ footer {
 
   /* 2. Make the pricing card fit and not get deformed */
   .pricing-card {
-    width: 90%; /* Make the card narrower to fit the screen */
-    margin: 20px auto; /* Center the card horizontally with some top/bottom margin */
+    width: 90%; 
+    margin: 20px auto; 
     padding: 15px;
   }
 
   /* 3. Footer sections should stack one on top of the other */
-  .footer-section {
-    width: 100%; /* Make each section occupy full width */
-    margin-bottom: 20px; /* Add some spacing between stacked sections */
-  }
+  /* .footer-section {
+    width: 100%; 
+    margin-bottom: 20px; 
+  } */
 
   /* Adjusting text size, padding, and other elements to fit smaller screens */
   .pricing-card h2 {
@@ -832,69 +825,96 @@ footer {
   }
 
   .pricing-card p {
-    font-size: 16px; /* Adjusted font size for paragraphs */
+    font-size: 16px; 
   }
 
   .footer-section p {
-    font-size: 14px; /* Smaller font size for footer text */
+    font-size: 14px; 
   }
 }
 
 
-/* Global adjustments for mobile responsiveness */
-@media (max-width: 767px) {
-  .pricing-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 20px; /* Spacing between cards */
-    justify-items: center;
-  }
 
-  .pricing-card {
-    width: 100%; /* Full width within the grid */
-    box-sizing: border-box;
-  }
+/* Main footer container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; 
+  padding: 0; 
+  margin: 0;
+  color: #fff;
+  width: 100%; 
+}
 
-  .footer-up, .footer-down {
-    display: flex;
+/* Left section (Address) */
+.footer-address {
+  flex: 1;
+  text-align: center;
+  padding: 20px 0; 
+  margin: 0;
+}
+
+/* Right section (Social) */
+.footer-social {
+  flex: 1;
+  text-align: center;
+  background-color: #003804; /* Dark green */
+  padding: 20px 0; 
+  margin: 0; 
+}
+
+/* Social icons styling */
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-social ul li {
+  margin: 0 10px;
+}
+
+.footer-social ul li a {
+  color: #fff;
+  font-size: 14px;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  display: block;
+  border-radius: 50%;
+  background-color: #005a00; 
+  transition: background-color 0.3s ease;
+}
+
+.footer-social ul li a:hover {
+  background-color: #008000;
+}
+
+.footer-social p {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+footer {
+  margin: 0; 
+  padding: 0; 
+}
+
+@media only screen and (max-width: 768px) {
+  /* Footer sections stack vertically on small screens */
+  .footer-container {
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
 
-  /* Ensure footer items stack vertically */
-  .social-icons ul {
-    justify-content: center;
-    padding: 0;
-    list-style: none;
+  .footer-address, .footer-social {
+    margin-bottom: 20px;
   }
 
-  .social-icons ul li {
-    margin: 10px 15px;
-    display: inline-block;
-  }
-
-  /* Adjust button sizes for mobile */
-  .pricing-card button {
-    width: 80%;
-    padding: 10px;
-    font-size: 14px;
-  }
-}
-
-/* Tablet view: still two columns for cards, but increase size */
-@media (min-width: 768px) and (max-width: 991px) {
-  .pricing-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  .pricing-card {
-    max-width: 90%; /* Slightly larger on tablet screens */
-  }
-
-  .footer-up, .footer-down {
-    flex-direction: row;
-    justify-content: space-between;
+  .footer-address, .footer-social {
+    padding: 15px;
   }
 }
